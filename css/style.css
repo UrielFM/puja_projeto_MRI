@@ -516,3 +516,91 @@ margin-left: 6%;
     transform: translatex(-50%) scale(1);
     top: -1.8rem;
 }
+
+/* Medias Query Gerais */
+@media screen and (max-width: 1000px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cover,
+    .book .book-page {
+        width: 100%;
+        height: auto;
+    }
+
+    .cover {
+        border-radius: 0;
+    }
+
+    .cover.cover-left,
+    .cover.cover-right {
+        height: auto;
+    }
+
+    .book .book-page {
+        box-shadow: none;
+        position: static;
+        transform: none;
+    }
+
+    .book-page.page-left,
+    .book-page.page-right {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .profile-page img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Adicione esta regra de mídia no final do seu arquivo CSS */
+
+@media screen and (max-width: 767px) {
+    .wrapper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .cover,
+    .book .book-page {
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .book-page.page-left,
+    .book-page.page-right {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .profile-page img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .book-page .page-front,
+    .book-page .page-back {
+        padding: 1rem;
+    }
+
+    .number-page,
+    .nextprev-btn {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 0;
+    }
+
+    .back-profile {
+        right: 1rem;
+        bottom: 0.8rem;
+    }
+}

@@ -518,89 +518,36 @@ margin-left: 6%;
 }
 
 /* Medias Query Gerais */
-@media screen and (max-width: 1000px) {
-    .wrapper {
-        flex-direction: column;
-        align-items: center;
+@media (max-width: 980px) {
+    body {
+        font-size: 14px; /* Exemplo de ajuste de tamanho de fonte para telas menores */
     }
 
-    .cover,
-    .book .book-page {
-        width: 100%;
+    .cover img,
+    .cover div {
+        width: 100%; /* Exemplo de ajuste de tamanho de imagem para preencher a largura da tela */
         height: auto;
     }
 
-    .cover {
-        border-radius: 0;
+    .book-page {
+        width: 100%; /* Exemplo de ajuste de largura da página para ocupar 100% da largura da tela */
     }
 
-    .cover.cover-left,
-    .cover.cover-right {
-        height: auto;
-    }
-
-    .book .book-page {
-        box-shadow: none;
-        position: static;
-        transform: none;
-    }
-
-    .book-page.page-left,
-    .book-page.page-right {
-        width: 100%;
-        box-shadow: none;
-    }
-
-    .profile-page img {
-        max-width: 100%;
-        height: auto;
-    }
+    /* Adicione mais estilos conforme necessário para otimizar a experiência */
 }
-
-/* Adicione esta regra de mídia no final do seu arquivo CSS */
-
-@media screen and (max-width: 767px) {
-    .wrapper {
-        width: 100%;
-        height: 100%;
+@media (max-width: 768px) {
+    /* Adicione os estilos específicos para dispositivos móveis aqui */
+    body {
+        font-size: 16px; /* Exemplo de ajuste de tamanho de fonte para dispositivos móveis */
     }
 
-    .cover,
-    .book .book-page {
-        width: 100%;
-        height: auto;
-        box-shadow: none;
-        border-radius: 0;
-    }
-
-    .book-page.page-left,
-    .book-page.page-right {
-        width: 100%;
-        box-shadow: none;
-    }
-
-    .profile-page img {
-        max-width: 100%;
+    .cover img,
+    .cover div {
+        width: 100%; /* Ajuste o tamanho das imagens de capa para preencher a largura da tela */
         height: auto;
     }
 
-    .book-page .page-front,
-    .book-page .page-back {
-        padding: 1rem;
-    }
-
-    .number-page,
-    .nextprev-btn {
-        font-size: 1.5rem;
-    }
-
-    .btn {
-        width: 100%;
-        margin: 0;
-    }
-
-    .back-profile {
-        right: 1rem;
-        bottom: 0.8rem;
+    .book-page {
+        width: 100%; /* Faça com que as páginas ocupem 100% da largura da tela */
     }
 }

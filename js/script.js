@@ -97,3 +97,20 @@ pages.forEach((_, index) => {
 
     }, (index + 1) * 200 + 2100)
 })
+
+
+const disableBookMode = () => {
+    const pages = document.querySelectorAll('.book-page');
+    pages.forEach(page => {
+        page.classList.remove('turn');
+    });
+}
+
+const isMobile = () => {
+    return window.innerWidth <=950; // Aqui estou assumindo que dispositivos com menos de 768 pixels de largura são considerados móveis. Você pode ajustar esse valor conforme necessário.
+}
+
+// Chama a função para desativar o "modo book" apenas se não estiver em um dispositivo móvel
+if (!isMobile()) {
+    disableBookMode();
+}

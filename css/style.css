@@ -518,36 +518,15 @@ margin-left: 6%;
 }
 
 /* Medias Query Gerais */
-@media (max-width: 980px) {
-    body {
-        font-size: 14px; /* Exemplo de ajuste de tamanho de fonte para telas menores */
+
+/* Estilos para telas menores que 1000 pixels */
+@media screen and (max-width: 1000px) {
+    .example-element-small-screen {
+        background-color: yellow;
+        font-size: 16px;
     }
 
-    .cover img,
-    .cover div {
-        width: 100%; /* Exemplo de ajuste de tamanho de imagem para preencher a largura da tela */
-        height: auto;
-    }
-
-    .book-page {
-        width: 100%; /* Exemplo de ajuste de largura da página para ocupar 100% da largura da tela */
-    }
-
-    /* Adicione mais estilos conforme necessário para otimizar a experiência */
-}
-@media (max-width: 768px) {
-    /* Adicione os estilos específicos para dispositivos móveis aqui */
-    body {
-        font-size: 16px; /* Exemplo de ajuste de tamanho de fonte para dispositivos móveis */
-    }
-
-    .cover img,
-    .cover div {
-        width: 100%; /* Ajuste o tamanho das imagens de capa para preencher a largura da tela */
-        height: auto;
-    }
-
-    .book-page {
-        width: 100%; /* Faça com que as páginas ocupem 100% da largura da tela */
+    .new-element-small-screen {
+        color: blue;
     }
 }

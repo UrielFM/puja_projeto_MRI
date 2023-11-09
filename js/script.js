@@ -1,10 +1,7 @@
 const pageTurnBtn = document.querySelectorAll('.nextprev-btn');
 
-
 pageTurnBtn.forEach((el, index) => {
-
     el.onclick = () => {
-
         const pageTurnid = el.getAttribute('data-page');
         const pageTurn = document.getElementById(pageTurnid);
 
@@ -12,18 +9,15 @@ pageTurnBtn.forEach((el, index) => {
             pageTurn.classList.remove('turn');
             setTimeout(() => {
                 pageTurn.style.zIndex = 20 - index;
-            }, 500)
-        }
-
-        else {
+            }, 500);
+        } else {
             pageTurn.classList.add('turn');
             setTimeout(() => {
                 pageTurn.style.zIndex = 20 + index;
-            }, 500)
-
+            }, 500);
         }
-    }
-})
+    };
+});
 
 const pages = document.querySelectorAll('.book-page.page-right');
 const contactMeBtn = document.querySelector('.btn.contact-me');
@@ -35,25 +29,22 @@ contactMeBtn.onclick = () => {
 
             setTimeout(() => {
                 page.style.zIndex = 20 + index;
-            }, 500)
+            }, 500);
 
-        }, (index + 1) * 200 + 100)
-    })
+        }, (index + 1) * 200 + 100);
+    });
 }
-
 
 let totalPages = pages.length;
 let pageNumber = 0;
-
 
 function reverseIndex() {
     pageNumber--;
     if (pageNumber < 0) {
         pageNumber = totalPages - 1;
-
     }
-
 }
+
 const backProfileBtn = document.querySelector('.back-profile');
 
 backProfileBtn.onclick = () => {
@@ -65,25 +56,26 @@ backProfileBtn.onclick = () => {
             setTimeout(() => {
                 reverseIndex();
                 pages[pageNumber].style.zIndex = 10 + index;
-            }, 500)
+            }, 500);
 
-        }, (index + 1) * 200 + 100)
-    })
+        }, (index + 1) * 200 + 100);
+    });
 }
+
 const coverRight = document.querySelector('.cover.cover-right');
 const pageLeft = document.querySelector('.book-page.page-left');
 
 setTimeout(() => {
     coverRight.classList.add('turn');
-}, 2100)
+}, 2100);
 
 setTimeout(() => {
     coverRight.style.zIndex = -1;
-}, 2800)
+}, 2800);
 
 setTimeout(() => {
     pageLeft.style.zIndex = 20;
-}, 3200)
+}, 3200);
 
 pages.forEach((_, index) => {
     setTimeout(() => {
@@ -93,11 +85,10 @@ pages.forEach((_, index) => {
         setTimeout(() => {
             reverseIndex();
             pages[pageNumber].style.zIndex = 10 + index;
-        }, 500)
+        }, 500);
 
-    }, (index + 1) * 200 + 2100)
-})
-
+    }, (index + 1) * 200 + 2100);
+});
 
 const disableBookMode = () => {
     const pages = document.querySelectorAll('.book-page');
@@ -106,11 +97,21 @@ const disableBookMode = () => {
     });
 }
 
-const isMobile = () => {
-    return window.innerWidth <=950; // Aqui estou assumindo que dispositivos com menos de 768 pixels de largura são considerados móveis. Você pode ajustar esse valor conforme necessário.
+function isMobile() {
+    return window.innerWidth <= 950;
 }
 
-// Chama a função para desativar o "modo book" apenas se não estiver em um dispositivo móvel
+if (window.matchMedia('(max-width: 1000px)').matches) {
+    
+    const exampleElement = document.querySelector('.example-element');
+    exampleElement.style.backgroundColor = 'red';
+
+    const newElement = document.createElement('div');
+    newElement.textContent = 'Novo Elemento';
+    document.body.appendChild(newElement);
+}
+
+
 if (!isMobile()) {
     disableBookMode();
 }
